@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Karan Khara – Portfolio</title>
+
+<style>
+/* ===== THEME ===== */
+:root{
+  --bg:#fafafa;
+  --card:#ffffff;
+  --text:#111;
+  --muted:#666;
+  --border:#e5e5e5;
+  --accent:#f59e0b;
+}
+
+[data-theme="dark"]{
+  --bg:#0f0f0f;
+  --card:#1a1a1a;
+  --text:#f1f1f1;
+  --muted:#aaa;
+  --border:#333;
+  --accent:#fbbf24;
+}
+
+/* ===== GLOBAL ===== */
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  font-family: 'Segoe UI', sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  transition:0.3s;
+}
+.container{
+  max-width:900px;
+  margin:auto;
+  padding:100px 20px 60px;
+}
+
+/* ===== NAVBAR ===== */
+nav{
+  position:fixed;
+  top:0;left:0;right:0;
+  background:var(--card);
+  border-bottom:1px solid var(--border);
+  padding:15px 20px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  backdrop-filter:blur(10px);
+  z-index:100;
+}
+nav a{
+  color:var(--muted);
+  text-decoration:none;
+  margin-left:20px;
+  transition:0.2s;
+}
+nav a:hover{color:var(--accent);}
+.theme-btn{
+  border:1px solid var(--border);
+  background:none;
+  padding:6px 10px;
+  border-radius:6px;
+  cursor:pointer;
+  transition:0.2s;
+}
+.theme-btn:hover{
+  background:var(--accent);
+  color:white;
+}
+
+/* ===== PROFILE ===== */
+.profile{
+  display:flex;
+  align-items:center;
+  gap:20px;
+  margin-bottom:50px;
+}
+.avatar{
+  width:80px;height:80px;
+  border-radius:50%;
+  background:linear-gradient(135deg,var(--accent),#ef4444);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:white;
+  font-size:28px;
+  font-weight:bold;
+  box-shadow:0 5px 20px rgba(0,0,0,0.1);
+}
+.name{font-size:30px;margin-bottom:5px;}
+.tagline{color:var(--muted);}
+
+/* ===== SECTIONS ===== */
+section{margin-bottom:50px;}
+h2{
+  font-size:12px;
+  text-transform:uppercase;
+  letter-spacing:1px;
+  margin-bottom:20px;
+  color:var(--muted);
+}
+
+/* ===== CARDS ===== */
+.card{
+  background:var(--card);
+  border:1px solid var(--border);
+  padding:18px;
+  border-radius:12px;
+  transition:0.3s;
+}
+.card:hover{
+  transform:translateY(-4px);
+  border-color:var(--accent);
+  box-shadow:0 10px 25px rgba(0,0,0,0.08);
+}
+
+/* ===== GRID ===== */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:15px;
+}
+
+/* ===== SKILL TAG ===== */
+.skill{
+  display:inline-block;
+  padding:6px 12px;
+  border:1px solid var(--border);
+  border-radius:20px;
+  margin:5px 5px 0 0;
+  font-size:13px;
+  transition:0.2s;
+}
+.skill:hover{
+  background:var(--accent);
+  color:white;
+}
+
+/* ===== FOOTER ===== */
+footer{
+  border-top:1px solid var(--border);
+  padding-top:20px;
+  font-size:13px;
+  color:var(--muted);
+  text-align:center;
+}
+
+/* ===== SCROLL BUTTON ===== */
+.scroll-top{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  width:40px;
+  height:40px;
+  border-radius:50%;
+  border:none;
+  background:var(--accent);
+  color:white;
+  cursor:pointer;
+  display:none;
+}
+
+@media(max-width:600px){
+  .profile{flex-direction:column;align-items:flex-start;}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <strong>Karan Khara</strong>
+  <div>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+    <button class="theme-btn" onclick="toggleTheme()">🌙</button>
+  </div>
+</nav>
+
+<div class="container">
+
+<!-- PROFILE -->
+<div class="profile">
+  <div class="avatar">KK</div>
+  <div>
+    <div class="name">Karan Khara</div>
+    <div class="tagline">Web Developer · BCA Student</div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+  <h2>About</h2>
+  <p>I build clean and interactive web applications using modern technologies.
+  Passionate about user experience, performance, and clean UI design.</p>
+</section>
+
+<!-- SKILLS -->
+<section>
+  <h2>Language</h2>
+  <div>
+    <span class="skill">HTML</span>
+    <span class="skill">CSS</span>
+    <span class="skill">JavaScript</span>
+    <span class="skill">PHP</span>
+    <span class="skill">MySQL</span>
+    <span class="skill">Git</span>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section>
+  <h2>Experience</h2>
+  <div class="card">
+    <strong>Student</strong><br>
+    <small style="color:var(--muted);">2024 – Present</small>
+    <p>Building web applications and student management systems.</p>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="grid">
+    <div class="card">
+      <strong>Digital Notice Board</strong>
+      <p>College announcement system with scheduled publishing.</p>
+    </div>
+    <div class="card">
+      <strong>Blood Donor Portal</strong>
+      <p>Search donors by city with QR profile system.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <h2>Contact</h2>
+  <p>Email: karan@email.com</p>
+</section>
+
+<footer>
+  © 2026 Karan Khara – Built with HTML, CSS & JS
+</footer>
+
+</div>
+
+<button class="scroll-top" onclick="scrollTop()">↑</button>
+
+<script>
+/* THEME TOGGLE */
+function toggleTheme(){
+  const html=document.documentElement;
+  const current=html.getAttribute("data-theme");
+  html.setAttribute("data-theme",current==="dark"?"light":"dark");
+}
+
+/* SCROLL BUTTON */
+const btn=document.querySelector(".scroll-top");
+window.addEventListener("scroll",()=>{
+  btn.style.display=window.scrollY>300?"block":"none";
+});
+function scrollTop(){
+  window.scrollTo({top:0,behavior:"smooth"});
+}
+</script>
+
+</body>
+</html>
