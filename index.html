@@ -139,6 +139,8 @@ h2{
 .skill:hover{
   background:var(--accent);
   color:white;
+  /* transform: translateY(-1px); */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
 
 /* ===== FOOTER ===== */
@@ -167,6 +169,10 @@ footer{
 
 @media(max-width:600px){
   .profile{flex-direction:column;align-items:flex-start;}
+}
+a {
+  text-decoration: none;
+  color: #f59e0b;
 }
 </style>
 </head>
@@ -202,6 +208,16 @@ footer{
 
 <!-- SKILLS -->
 <section>
+  <h2>Social Links</h2>
+  <div>
+    <span class="skill">GITHUB</span>
+    <span class="skill">Instagram</span>
+    <span class="skill">Youtube</span>
+    <span class="skill">X</span>
+  </div>
+</section>
+
+<section>
   <h2>Language</h2>
   <div>
     <span class="skill">HTML</span>
@@ -235,16 +251,38 @@ footer{
     <div class="card">
       <strong>Digital Notice Board</strong>
       <p>College announcement system with scheduled publishing.</p>
+      <a href="https://github.com/KaranKaran00/hackathon">Code</a>
+      
     </div>
-    <div class="card">
-      <strong>Tic-Tac-Toe</strong>
-      <p>Game for two players</p>
+    <div class="card" >
+      <strong >Tic-Tac-Toe</strong>
+      <p >Game for two players</p>
       <a href="https://karankaran00.github.io/Tic-Tac-Toe/">Visit</a>
     </div>
     <div class="card">
       <strong>Replica of ISRO</strong>
       <p>It is a Replica of ISRO Website </p>
-      <a href="https://karankaran00.github.io/Tic-Tac-Toe/">Visit</a>
+      <a href="https://karankaran00.github.io/Replica_of_ISRO/">Visit</a>
+    </div>
+    <div class="card">
+      <strong>Replica of Google</strong>
+      <p>It is a Replica of Google</p>
+      <a href="https://karankaran00.github.io/replica_of_google/">Visit</a>
+    </div>
+    <div class="card">
+      <strong>UserForm in Java</strong>
+      <p>Java GUI Form </p>
+      <a href="https://github.com/KaranKaran00/UserForm_in_Java">Code</a>
+    </div>
+    <div class="card">
+      <strong>S P S</strong>
+      <p>Stone Paper Scissor Game console-based application </p>
+      <a href="https://github.com/KaranKaran00/SPS">Code</a>
+    </div>
+    <div class="card">
+      <strong>Calculator</strong>
+      <p>Calculator Made using JS, HTML and CSS </p>
+      <a href="https://karankaran00.github.io/Calculator/">Visit</a>
     </div>
   </div>
 </section>
@@ -252,7 +290,9 @@ footer{
 <!-- CONTACT -->
 <section id="contact">
   <h2>Contact</h2>
-  <p>Email: karan@email.com</p>
+  <p>Email: kharakaran504@email.com</p>
+  <!-- <p href="https://github.com/KaranKaran00/UserForm_in_Java">github</p> -->
+   Github : <a  href="https://github.com/KaranKaran00">github</a>
 </section>
 
 <footer>
@@ -272,14 +312,20 @@ function toggleTheme(){
 }
 
 /* SCROLL BUTTON */
-const btn=document.querySelector(".scroll-top");
-window.addEventListener("scroll",()=>{
-  btn.style.display=window.scrollY>300?"block":"none";
+// <script>
+document.addEventListener("DOMContentLoaded", function () {
+  const btn = document.querySelector(".scroll-top");
+
+  window.addEventListener("scroll", () => {
+    btn.style.display = window.scrollY > 300 ? "block" : "none";
+  });
+
+  btn.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
 });
-function scrollTop(){
-  window.scrollTo({top:0,behavior:"smooth"});
-}
-</script>
+ </script>
+<!-- </script> -->
 
 </body>
 </html>
