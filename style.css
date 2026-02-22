@@ -122,6 +122,12 @@
     margin:5px 5px 0 0;
     font-size:13px;
   }
+  .skill:hover{
+    background:var(--accent);
+    color:white;
+    /* transform: translateY(-1px); */
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  }
   
   footer{
     border-top:1px solid var(--border);
