@@ -80,7 +80,13 @@
     font-size:28px;
     font-weight:bold;
   }
-  
+  .logo{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
   .name{font-size:30px;margin-bottom:5px;}
   .tagline{color:var(--muted);}
   
