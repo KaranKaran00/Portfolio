@@ -165,3 +165,29 @@
     text-decoration: none;
     color: #f59e0b;
   }
+  .marquee {
+    width: 100%;
+    overflow: hidden;
+    /* background: #111; */
+    color: white;
+  }
+  
+  .marquee-track {
+    display: flex;
+    width: max-content;
+    animation: scroll 15s linear infinite;
+  }
+  
+  .marquee-content {
+    white-space: nowrap;
+    padding-right: 50px;
+  }
+  
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
