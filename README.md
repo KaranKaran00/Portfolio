@@ -1,7 +1,7 @@
 # Portfolio
 
  https://karankaran00.github.io/Portfolio/
-<br>about myself
+<br>
 # Personal Portfolio Website
 
 This is my personal portfolio website where I showcase my web development projects, skills, and contact information.
