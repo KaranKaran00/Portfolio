@@ -23,5 +23,6 @@ Clone the repository and open index.html in your browser.
 
 <p align="center">
   <img src="Screenshot_2026-03-05-18-12-00-72_40deb401b9ffe8e1df2f1cc5ba480b12.jpg" width="100%" />
+ <h2>Mobile responsive</h2>
   <img src="Screenshot_2026-03-05-18-12-35-41_40deb401b9ffe8e1df2f1cc5ba480b12.jpg" width="30%" />  
 </p>
